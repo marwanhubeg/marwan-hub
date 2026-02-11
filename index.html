@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مروان هوب | مصانع رقمية ذكية</title>
+    
+    <!-- SQL.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🏭 مروان هوب</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="products.html">المنتجات</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>حلول تقنية ذكية، <span>تُنتج في ثوانٍ</span></h2>
+                <p>مصانع رقمية شغالة 24/7 بأقصى كفاءة وسرعة، تنتج برامج وأنظمة جاهزة حسب طلبك</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary">📦 استعرض المنتجات</a>
+                    <a href="contact.html" class="btn btn-secondary">📞 تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3 id="speed-stat">1000%</h3>
+                    <p>سرعة الإنتاج</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <h3>10/10</h3>
+                    <p>جودة المنتجات</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-industry"></i>
+                    <h3 id="factories-stat">4</h3>
+                    <p>مصانع نشطة</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-box"></i>
+                    <h3 id="products-stat">0</h3>
+                    <p>منتج متوفر</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>🛍️ أحدث المنتجات</h2>
+                <a href="products.html" class="view-all">عرض الكل <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded here -->
+                <div style="text-align: center; padding: 2rem; color: var(--mh-gray);">
+                    <i class="fas fa-spinner fa-spin"></i> جاري تحميل المنتجات...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Factories Section -->
+    <section class="factories">
+        <div class="container">
+            <h2>🏭 مصانعنا الرقمية</h2>
+            <div class="factories-grid">
+                <div class="factory-card">
+                    <div class="factory-icon">💻</div>
+                    <h3>مصنع التقني</h3>
+                    <p>750 مشروع/شهر</p>
+                    <span class="badge">كفاءة 10/10</span>
+                </div>
+                <div class="factory-card">
+                    <div class="factory-icon">🎨</div>
+                    <h3>مصنع الإبداع</h3>
+                    <p>420 مشروع/شهر</p>
+                    <span class="badge">كفاءة 10/10</span>
+                </div>
+                <div class="factory-card">
+                    <div class="factory-icon">📚</div>
+                    <h3>مصنع التعليم</h3>
+                    <p>600 مشروع/شهر</p>
+                    <span class="badge">كفاءة 10/10</span>
+                </div>
+                <div class="factory-card">
+                    <div class="factory-icon">🏛️</div>
+                    <h3>مصنع المؤسسات</h3>
+                    <p>300 مشروع/شهر</p>
+                    <span class="badge">كفاءة 10/10</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>🏭 مروان هوب</h3>
+                    <p>مصانع رقمية ذكية تنتج برامج وأنظمة جاهزة في دقائق</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>اتصل بنا</h4>
+                    <p><i class="fab fa-whatsapp"></i> 0100 123 4567</p>
+                    <p><i class="far fa-envelope"></i> marwanhub.eg@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 مروان هوب - جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

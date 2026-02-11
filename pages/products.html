@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مروان هوب - جميع المنتجات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🏭</span>
+                    <span class="logo-text">مروان هوب</span>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">الرئيسية</a>
+                    <a href="products.html" class="nav-link">المنتجات</a>
+                    <a href="contact.html" class="nav-link">اتصل بنا</a>
+                    <a href="#" class="nav-link">🔐 دخول</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+        <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">
+            📦 <span>جميع</span> المنتجات
+        </h1>
+        
+        <!-- Filters -->
+        <div style="display: flex; gap: 1rem; justify-content: center; margin: 2rem 0; flex-wrap: wrap;">
+            <a href="?category=all" class="btn btn-primary">كل المنتجات</a>
+            <a href="?category=erp" class="btn btn-outline">أنظمة محاسبية</a>
+            <a href="?category=crm" class="btn btn-outline">CRM</a>
+            <a href="?category=ecommerce" class="btn btn-outline">متاجر</a>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <!-- ERP -->
+            <div class="product-card">
+                <div class="product-icon">💻</div>
+                <div class="product-title">ERP كامل</div>
+                <p style="color: var(--mh-gray);">محاسبة + مخازن + الموارد البشرية</p>
+                <div style="margin: 1rem 0; color: var(--mh-gray); font-size: 0.875rem;">
+                    ⚡ وقت الإنتاج: 3 دقائق • 🎯 جودة 10/10
+                </div>
+                <div class="product-price">$2,500</div>
+                <a href="product.html?id=erp" class="btn btn-primary" style="width: 100%;">شراء</a>
+            </div>
+            
+            <!-- CRM -->
+            <div class="product-card">
+                <div class="product-icon">📊</div>
+                <div class="product-title">CRM متقدم</div>
+                <p style="color: var(--mh-gray);">عملاء + تيكتس + تقارير تفاعلية</p>
+                <div style="margin: 1rem 0; color: var(--mh-gray); font-size: 0.875rem;">
+                    ⚡ وقت الإنتاج: 2 دقيقة • 🎯 جودة 10/10
+                </div>
+                <div class="product-price">$1,900</div>
+                <a href="product.html?id=crm" class="btn btn-primary" style="width: 100%;">شراء</a>
+            </div>
+            
+            <!-- متجر VIP -->
+            <div class="product-card">
+                <div class="product-icon">🏬</div>
+                <div class="product-title">متجر VIP</div>
+                <p style="color: var(--mh-gray);">شوبيفاي + لايكر + بوابات دفع</p>
+                <div style="margin: 1rem 0; color: var(--mh-gray); font-size: 0.875rem;">
+                    ⚡ وقت الإنتاج: 5 دقائق • 🎯 جودة 10/10
+                </div>
+                <div class="product-price">$2,800</div>
+                <a href="product.html?id=ecommerce" class="btn btn-primary" style="width: 100%;">شراء</a>
+            </div>
+            
+            <!-- تحليلات -->
+            <div class="product-card">
+                <div class="product-icon">📈</div>
+                <div class="product-title">تحليلات مبيعات</div>
+                <p style="color: var(--mh-gray);">مبيعات + عملاء + أرباح + توقعات</p>
+                <div style="margin: 1rem 0; color: var(--mh-gray); font-size: 0.875rem;">
+                    ⚡ وقت الإنتاج: 2 دقيقة • 🎯 جودة 10/10
+                </div>
+                <div class="product-price">$1,500</div>
+                <a href="product.html?id=analytics" class="btn btn-primary" style="width: 100%;">شراء</a>
+            </div>
+            
+            <!-- نظام عيادات -->
+            <div class="product-card">
+                <div class="product-icon">🏥</div>
+                <div class="product-title">نظام عيادات</div>
+                <p style="color: var(--mh-gray);">حجوزات + ملفات مرضى + فواتير</p>
+                <div style="margin: 1rem 0; color: var(--mh-gray); font-size: 0.875rem;">
+                    ⚡ وقت الإنتاج: 4 دقائق • 🎯 جودة 10/10
+                </div>
+                <div class="product-price">$2,200</div>
+                <a href="product.html?id=clinic" class="btn btn-primary" style="width: 100%;">شراء</a>
+            </div>
+            
+            <!-- نظام مدارس -->
+            <div class="product-card">
+                <div class="product-icon">🏫</div>
+                <div class="product-title">نظام مدارس</div>
+                <p style="color: var(--mh-gray);">طلاب + درجات + شهادات + تواصل</p>
+                <div style="margin: 1rem 0; color: var(--mh-gray); font-size: 0.875rem;">
+                    ⚡ وقت الإنتاج: 4 دقائق • 🎯 جودة 10/10
+                </div>
+                <div class="product-price">$2,000</div>
+                <a href="product.html?id=school" class="btn btn-primary" style="width: 100%;">شراء</a>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div style="display: flex; justify-content: center; gap: 1rem; margin: 3rem 0;">
+            <span style="color: var(--mh-blue); font-weight: 700;">1</span>
+            <a href="#" style="color: var(--mh-gray); text-decoration: none;">2</a>
+            <a href="#" style="color: var(--mh-gray); text-decoration: none;">3</a>
+            <a href="#" style="color: var(--mh-gray); text-decoration: none;">4</a>
+            <a href="#" style="color: var(--mh-gray); text-decoration: none;">5</a>
+            <span style="color: var(--mh-gray);">...</span>
+            <a href="#" style="color: var(--mh-gray); text-decoration: none;">▶️</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">© مروان هوب 2026 | جميع الحقوق محفوظة</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

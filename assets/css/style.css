@@ -1,0 +1,352 @@
+/* ============================================
+   مروان هوب - Marwan Hub
+   الهوية البصرية - الإصدار 1.0
+============================================ */
+
+:root {
+    --mh-black: #0A0F1E;
+    --mh-blue: #00F0FF;
+    --mh-gold: #FFD700;
+    --mh-dark: #111827;
+    --mh-green: #10B981;
+    --mh-white: #F9FAFB;
+    --mh-gray: #9CA3AF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+    background-color: var(--mh-black);
+    color: var(--mh-white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to bottom, rgba(10,15,30,0.95), rgba(10,15,30,0.98));
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,240,255,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--mh-white), var(--mh-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--mh-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--mh-blue);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--mh-blue);
+    color: var(--mh-black);
+    box-shadow: 0 0 20px rgba(0,240,255,0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0,240,255,0.5);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--mh-blue);
+    color: var(--mh-blue);
+}
+
+.btn-outline:hover {
+    background: var(--mh-blue);
+    color: var(--mh-black);
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-title span {
+    background: linear-gradient(135deg, var(--mh-blue), var(--mh-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--mh-gray);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.stat-card {
+    background: var(--mh-dark);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(0,240,255,0.1);
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    border-color: var(--mh-blue);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,240,255,0.1);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--mh-blue);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--mh-gray);
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.product-card {
+    background: var(--mh-dark);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(0,240,255,0.1);
+    transition: all 0.3s;
+}
+
+.product-card:hover {
+    border-color: var(--mh-blue);
+    transform: translateY(-5px);
+}
+
+.product-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.product-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--mh-gold);
+    margin: 1rem 0;
+}
+
+/* Footer */
+.footer {
+    background: var(--mh-dark);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(0,240,255,0.1);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-text {
+    color: var(--mh-gray);
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Page */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.contact-card {
+    background: var(--mh-dark);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(0,240,255,0.1);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--mh-blue);
+}
+
+.contact-info {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.contact-response {
+    color: var(--mh-green);
+    font-size: 0.875rem;
+}
+
+/* Success Page */
+.success-card {
+    background: var(--mh-dark);
+    padding: 3rem;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 800px;
+    margin: 3rem auto;
+    border: 1px solid rgba(16,185,129,0.3);
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: var(--mh-green);
+    margin-bottom: 1rem;
+}
+
+.success-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--mh-green);
+    margin-bottom: 1rem;
+}
+
+.download-btn {
+    background: var(--mh-green);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+/* Utilities */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-title span {
+    color: var(--mh-blue);
+}
+
+.text-center { text-align: center; }
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+.p-4 { padding: 1rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
