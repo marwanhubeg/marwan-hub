@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مروان هوب | مصانع رقمية ذكية</title>
     
-    <!-- SQL.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <!-- SQL.js - CDN مباشر -->
+    <script src="https://cdn.jsdelivr.net/npm/sql.js@1.8.0/dist/sql-wasm.js"></script>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@400;700&display=swap" rel="stylesheet">
@@ -15,10 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="logo">
@@ -34,7 +33,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -48,7 +46,6 @@
         </div>
     </section>
 
-    <!-- Live Stats -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -76,7 +73,6 @@
         </div>
     </section>
 
-    <!-- Products Section -->
     <section class="products">
         <div class="container">
             <div class="section-header">
@@ -84,7 +80,6 @@
                 <a href="products.html" class="view-all">عرض الكل <i class="fas fa-arrow-left"></i></a>
             </div>
             <div class="products-grid" id="products-grid">
-                <!-- Products will be loaded here -->
                 <div style="text-align: center; padding: 2rem; color: var(--mh-gray);">
                     <i class="fas fa-spinner fa-spin"></i> جاري تحميل المنتجات...
                 </div>
@@ -92,46 +87,24 @@
         </div>
     </section>
 
-    <!-- Factories Section -->
     <section class="factories">
         <div class="container">
             <h2>🏭 مصانعنا الرقمية</h2>
             <div class="factories-grid">
-                <div class="factory-card">
-                    <div class="factory-icon">💻</div>
-                    <h3>مصنع التقني</h3>
-                    <p>750 مشروع/شهر</p>
-                    <span class="badge">كفاءة 10/10</span>
-                </div>
-                <div class="factory-card">
-                    <div class="factory-icon">🎨</div>
-                    <h3>مصنع الإبداع</h3>
-                    <p>420 مشروع/شهر</p>
-                    <span class="badge">كفاءة 10/10</span>
-                </div>
-                <div class="factory-card">
-                    <div class="factory-icon">📚</div>
-                    <h3>مصنع التعليم</h3>
-                    <p>600 مشروع/شهر</p>
-                    <span class="badge">كفاءة 10/10</span>
-                </div>
-                <div class="factory-card">
-                    <div class="factory-icon">🏛️</div>
-                    <h3>مصنع المؤسسات</h3>
-                    <p>300 مشروع/شهر</p>
-                    <span class="badge">كفاءة 10/10</span>
-                </div>
+                <div class="factory-card"><div class="factory-icon">💻</div><h3>مصنع التقني</h3><p>750 مشروع/شهر</p><span class="badge">كفاءة 10/10</span></div>
+                <div class="factory-card"><div class="factory-icon">🎨</div><h3>مصنع الإبداع</h3><p>420 مشروع/شهر</p><span class="badge">كفاءة 10/10</span></div>
+                <div class="factory-card"><div class="factory-icon">📚</div><h3>مصنع التعليم</h3><p>600 مشروع/شهر</p><span class="badge">كفاءة 10/10</span></div>
+                <div class="factory-card"><div class="factory-icon">🏛️</div><h3>مصنع المؤسسات</h3><p>300 مشروع/شهر</p><span class="badge">كفاءة 10/10</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
                     <h3>🏭 مروان هوب</h3>
-                    <p>مصانع رقمية ذكية تنتج برامج وأنظمة جاهزة في دقائق</p>
+                    <p>مصانع رقمية ذكية - القاهرة، مصر</p>
                 </div>
                 <div class="footer-contact">
                     <h4>اتصل بنا</h4>
@@ -145,7 +118,49 @@
         </div>
     </footer>
 
+    <script>
+        // حل سريع جداً - منتجات افتراضية لو SQLite محملش
+        window.onload = function() {
+            setTimeout(function() {
+                const grid = document.getElementById('products-grid');
+                if (grid && grid.children.length === 1 && grid.children[0].querySelector('.fa-spinner')) {
+                    grid.innerHTML = `
+                        <div class="product-card" onclick="window.location.href='product.html?id=1'">
+                            <div class="product-icon">💻</div>
+                            <h3>نظام ERP كامل</h3>
+                            <p>محاسبة + مخازن + موارد بشرية</p>
+                            <div class="product-price">$2,500</div>
+                            <button class="btn-buy" onclick="event.stopPropagation(); window.location.href='success.html'">🛒 اشتري الآن</button>
+                        </div>
+                        <div class="product-card" onclick="window.location.href='product.html?id=2'">
+                            <div class="product-icon">📊</div>
+                            <h3>CRM متقدم</h3>
+                            <p>عملاء + تيكتس + تقارير</p>
+                            <div class="product-price">$1,900</div>
+                            <button class="btn-buy" onclick="event.stopPropagation(); window.location.href='success.html'">🛒 اشتري الآن</button>
+                        </div>
+                        <div class="product-card" onclick="window.location.href='product.html?id=3'">
+                            <div class="product-icon">🏬</div>
+                            <h3>متجر VIP</h3>
+                            <p>متجر إلكتروني احترافي</p>
+                            <div class="product-price">$2,800</div>
+                            <button class="btn-buy" onclick="event.stopPropagation(); window.location.href='success.html'">🛒 اشتري الآن</button>
+                        </div>
+                        <div class="product-card" onclick="window.location.href='product.html?id=4'">
+                            <div class="product-icon">📈</div>
+                            <h3>تحليلات مبيعات</h3>
+                            <p>نظام تحليل وتقارير</p>
+                            <div class="product-price">$1,500</div>
+                            <button class="btn-buy" onclick="event.stopPropagation(); window.location.href='success.html'">🛒 اشتري الآن</button>
+                        </div>
+                    `;
+                    document.getElementById('products-stat').textContent = '6';
+                }
+            }, 1000);
+        };
+    </script>
+    
     <!-- Main JS -->
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
